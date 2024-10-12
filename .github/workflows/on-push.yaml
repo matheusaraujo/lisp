@@ -1,0 +1,20 @@
+name: on-push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-lisp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install SBCL
+        run: sudo apt-get update && sudo apt-get install -y sbcl
+
+      - name: Hello, World
+        run: sbcl --script hello.lisp

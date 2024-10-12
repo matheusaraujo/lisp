@@ -1,0 +1,18 @@
+{
+  "name": "Lisp Development (Alpine)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/sh"
+      },
+      "extensions": ["bluz71.lisp"]
+    }
+  },
+  "forwardPorts": [],
+  "postCreateCommand": "sbcl --version",
+  "remoteUser": "root"
+}
