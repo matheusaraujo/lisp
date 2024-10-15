@@ -1,2 +1,2 @@
-;; hello.lisp
+;; hello-world.lisp
 (format t "Hello, World!~%")

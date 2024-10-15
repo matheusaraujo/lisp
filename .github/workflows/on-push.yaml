@@ -17,4 +17,4 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y sbcl
 
       - name: Hello, World
-        run: sbcl --script hello.lisp
+        run: sbcl --script hello-world.lisp
